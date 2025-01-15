@@ -9,3 +9,8 @@ services:
         sync: false
       - key: APP_ENV
         value: production
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DATABASE_URL
+        value: postgresql://demo_db_ntua_user:mPWiZuhkdJHCskLv9ZmZECUm3JYBe5NE@dpg-cu3s71ogph6c738h022g-a/demo_db_ntua
+
