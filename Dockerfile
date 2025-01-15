@@ -32,9 +32,13 @@ RUN apt-get update && apt-get install -y \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer install --no-interaction --optimize-autoloader --no-dev
 
+
+
 # Set proper permissions
 RUN chown -R www-data:www-data /app \
     && chmod -R 755 /app/storage
+
+RUN php artisan key:generate
 
 # FrankenPHP uses port 80 by default
 EXPOSE 80
